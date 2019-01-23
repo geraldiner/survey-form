@@ -10,77 +10,82 @@
 
 <body>
     <main>
-        <h1 id="title">Feedback Form</h1>
-        <p id="description">Please let us know how we can improve.</p>
+        <h1 id="title">Ice Cream Preferences Survey Form</h1>
+        <p id="description">Please tell us more about your ice cream preferences.</p>
         <form action="" id="survey-form">
             <div class="row">
                 <div class="left">
-                    <label for="name" id="name-label">Your Name: </label>
+                    <label for="name" id="name-label">* Your Name:</label>
                 </div>
                 <div class="right">
-                    <input type="text" name="name" class="input-field" id="name" placeholder="Please enter your name" required>
+                    <input type="text" name="name" class="input-field" id="name" placeholder="Please enter your name here" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="left"><label for="email" id="email-label">* Your Email:</label></div>
+                <div class="right"><input type="email" name="email" id="email" class="input-field" placeholder="example@email.com" required></div>
+            </div>
+            <div class="row">
+                <div class="left"><label for="number" id="number-label">* Number of scoops:</label></div>
+                <div class="right"><input type="number" name="number" id="number" class="input-field" id="number" min="1" max="100" placeholder="Please enter a number from 1-100" required></div>
+            </div>
+            <div class="row">
+                <div class="left">What type of ice cream holder do you prefer?</div>
+                <div class="right">
+                    <select name="dropchoices" id="dropdown" class="input-field">
+                        <option disabled value>Select an option</option>
+                        <<option value="bowl">Bowl</option>}
+                            option
+                            <option value="s-cone">Sugar Cone</option>
+                            <option value="w-cone">Waffle Cone</option>
+                    </select>
                 </div>
             </div>
             <div class="row">
                 <div class="left">
-                    <label for="email" id="email-label">Your Email: </label>
+                    Do you like to share your ice cream with friends?
                 </div>
                 <div class="right">
-                    <input type="email" name="email" class="input-field" id="email" placeholder="example@email.com" required>
+                    <ul id="radios">
+                        <li class="radio">
+                            <label for="radio1"><input type="radio" name="radiochoice" id="radio1" class="radio-label" value="1">Yes</label>
+                        </li>
+                        <li class="radio">
+                            <label for="radio2"><input type="radio" name="radiochoice" id="radio2" class="radio-label" value="0">No</label>
+                        </li>
+                        <li class="radio">
+                            <label for="radio3"><input type="radio" name="radiochoice" id="radio3" class="radio-label" value="2">Maybe</label>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="row">
-                <div class="left"><label for="number" id="number-label">Your Age: </label></div>
-                <div class="right"><input type="number" name="number" class="input-field" id="number" placeholder="Please enter your age" required min="1" max="100"></div>
-            </div>
-
-            <div class="row">
-            	<div class="left">
-            		Please select your student standing:
-            	</div>
-            	<div class="right">
-            		<select name="dropchoices" class="input-field" id="dropdown" class="dropdown">
-						<option disabled value>Select an option</option>
-						<option value="student">Freshman</option>
-						<option value="job">Sophomore</option>
-						<option value="learner">Junior</option>
-						<option value="preferNo">Senior</option>
-						<option value="other">Other</option>
-            		</select>
-            	</div>
-            </div>
-
-            <div class="row">
-            	<div class="left">
-            		Please choose what best describes you.
-            	</div>
-            	<div id="radios" class="right">
-            		<input type="radio" name="radiochoice" id="radio1" value="1">
-            		<label for="radio1" class="label">Radio 1</label>
-            		<input type="radio" name="radiochoice" id="radio2" value="2">
-            		<label for="radio2" class="label">Radio 2</label>
-            		<input type="radio" name="radiochoice" id="radio3" value="3">
-            		<label for="radio3" class="label">Radio 3</label>
-            	</div>
+                <div class="left">
+                    What type of toppings do you like on your ice cream? (Check all that apply.)
+                </div>
+                <div class="right">
+                    <ul id="checks">
+                        <li class="check"><label for="check1"><input type="checkbox" name="checkchoice" id="check1" value="sprinkles">Sprinkles</label></li>
+                        <li class="check"><label for="check2"><input type="checkbox" name="checkchoice" id="check2" value="fudge">Fudge</label></li>
+                        <li class="check"><label for="check3"><input type="checkbox" name="checkchoice" id="check3" value="cereal">Cereal</label></li>
+                        <li class="check"><label for="check4"><input type="checkbox" name="checkchoice" id="check4" value="candy">Candy</label></li>
+                        <li class="check"><label for="check4"><input type="checkbox" name="checkchoice" id="check4" value="none">None</label></li>
+                    </ul>
+                </div>
             </div>
             <div class="row">
-            	<div class="left">Check all that apply: </div>
-            	<div id="checks" class="right">
-            		<div class="check-choice"><input id="check1" type="checkbox" name="checkchoice" value="1"><label for="check1" class="check-label">I have tried turning it on and off again. </label></div>
-            		<div class="check-choice"><input id="check2" type="checkbox" name="checkchoice" value="2"><label for="check2" id="check-label">I have tried unplugging the device, waiting 10 seconds, and plugging it back in. </label></div>
-            	</div>
+                <div class="left">Please describe the best ice cream you ever had</div>
+                <div class="right"><textarea name="desc" rows="10"></textarea></div>
             </div>
-            <div class="row">
-            	<div class="left">Please tell us more about the issue: </div>
-            	<div class="right"> <textarea name="essay" rows="25"></textarea></div>
+            <div class="row bottom">
+                <button id="submit" type="submit">Submit</button>
             </div>
-
-          
-            <center><button type="submit" name="submit" id="submit">Submit</button></center>
         </form>
     </main>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" type="text/javascript" charset="utf-8" async defer>
-    </script>
+    <footer>
+    </footer>
 </body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" type="text/javascript" charset="utf-8" async defer>
+</script>
 
 </html>
