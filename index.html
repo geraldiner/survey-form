@@ -36,15 +36,15 @@
 
             <div class="row">
             	<div class="left">
-            		Please select your type:
+            		Please select your student standing:
             	</div>
             	<div class="right">
             		<select name="dropchoices" class="input-field" id="dropdown" class="dropdown">
 						<option disabled value>Select an option</option>
-						<option value="student">Student</option>
-						<option value="job">Full Time Job</option>
-						<option value="learner">Full Time Learner</option>
-						<option value="preferNo">Prefer not to say</option>
+						<option value="student">Freshman</option>
+						<option value="job">Sophomore</option>
+						<option value="learner">Junior</option>
+						<option value="preferNo">Senior</option>
 						<option value="other">Other</option>
             		</select>
             	</div>
@@ -66,8 +66,8 @@
             <div class="row">
             	<div class="left">Check all that apply: </div>
             	<div id="checks" class="right">
-            		<input id="check1" type="checkbox" name="checkchoice" value="1"><label for="check1">Check 1 </label>
-            		<input id="check2" type="checkbox" name="checkchoice" value="2"><label for="check2">Check 2 </label>
+            		<div class="check-choice"><input id="check1" type="checkbox" name="checkchoice" value="1"><label for="check1" class="check-label">I have tried turning it on and off again. </label></div>
+            		<div class="check-choice"><input id="check2" type="checkbox" name="checkchoice" value="2"><label for="check2" id="check-label">I have tried unplugging the device, waiting 10 seconds, and plugging it back in. </label></div>
             	</div>
             </div>
             <div class="row">
