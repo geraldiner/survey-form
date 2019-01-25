@@ -89,19 +89,3 @@ textarea {
   margin: 10px;
   border: 0px solid;
 }
-
-.check-label {
-  position: relative;
-  margin-left: 10px;
-  padding-bottom: 10px;
-}
-
-textarea {
-	width: 100%;
-	margin-top: 15px;
-	font-family: sans-serif;
-}
-
-button {
-	margin-top: 15px;
-}
